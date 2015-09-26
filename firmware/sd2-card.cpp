@@ -228,7 +228,7 @@ uint8_t Sd2Card::init(uint8_t sckRateID, uint8_t chipSelectPin) {
     SPI.setClockDivider(SPI_CLOCK_DIV8);
   }
   
-  SPI.begin(chipSelectPin_);
+  SPI1.begin(chipSelectPin_);
   
   SPImode_ = 1;		// Set hardware SPI mode
   
