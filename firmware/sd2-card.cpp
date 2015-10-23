@@ -143,12 +143,14 @@ uint32_t Sd2Card::cardSize(void) {
 
 //------------------------------------------------------------------------------
 inline void Sd2Card::chipSelectHigh(void) {
-  digitalWrite(chipSelectPin_, HIGH);
+  //digitalWrite(chipSelectPin_, HIGH);
+  GPIO_SetBits(GPIOA, GPIO_Pin_8);
 }
 
 //------------------------------------------------------------------------------
 inline void Sd2Card::chipSelectLow(void) {
-  digitalWrite(chipSelectPin_, LOW);
+  //digitalWrite(chipSelectPin_, LOW);
+  GPIO_ResetBits(GPIOA, GPIO_Pin_8);
 }
 
 //------------------------------------------------------------------------------
